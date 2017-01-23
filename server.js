@@ -11,3 +11,9 @@ app.get('*', (req, res) => {
 
 app.listen(port);
 console.log('Server started');
+
+new webpack.DefinePlugin({
+    'process.env': {
+      'NODE_ENV': JSON.stringify('production')
+    }
+  })
